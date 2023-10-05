@@ -89,9 +89,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-- name: Setup Node.js environment
+      - name: Setup Node.js environment
   uses: actions/setup-node@v3.8.1
-  with:
+    with:
     # Set always-auth in npmrc.
     always-auth: # optional, default is false
     # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
@@ -115,10 +115,10 @@ jobs:
     - name: nodejsscan
   # You may pin to the exact commit or the version.
   # uses: ajinabraham/njsscan-action@7237412fdd36af517e2745077cedbf9d6900d711
-  uses: ajinabraham/njsscan-action@v6
-  with:
+    uses: ajinabraham/njsscan-action@v6
+    with:
     # positional arguments:
-  path                  Path can be file(s) or directories with source code
+     path                  Path can be file(s) or directories with source code
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -131,8 +131,9 @@ optional arguments:
   -w, --exit-warning    non zero exit code on warning
   -v, --version         show njsscan version
 
-    args: 
-    - name: NodeJS Action Template
-  # You may pin to the exact commit or the version.
-  # uses: bitoiu/node-js-action-template@a113bdf459ab942f94e8f4981cfbfb814c8aad90
-  uses: bitoiu/node-js-action-template@v1.0
+args: 
+ - name: NodeJS Action Template
+  
+# You may pin to the exact commit or the version.
+# uses: bitoiu/node-js-action-template@a113bdf459ab942f94e8f4981cfbfb814c8aad90
+uses: bitoiu/node-js-action-template@v1.0
